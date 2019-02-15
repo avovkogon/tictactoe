@@ -35,7 +35,7 @@ def makeMove(board, letter, move):
     board[move] = letter
 
 def isWinner(bo, le):
-    #Учитываязаполнениеигровогополяибуквыигрока,этафункциявозвращаетTrue,еслиигроквыиграл.
+    #Учитывая заполнение игрового поля и буквы игрока, эта функция возвращает True, если игрок выиграл.
     # Мы используем "bo" вместо "board" и "le" вместо "letter", поэтому нам не нужно много печатать.
     return ((bo[7] == le and bo[8] == le and bo[9] == le) or # across the top
     (bo[4] == le and bo[5] == le and bo[6] == le) or # через центр
@@ -78,7 +78,7 @@ def chooseRandomMoveFromList(board, movesList):
         return None
 
 def getComputerMove(board, computerLetter):
-     #Учитываязаполнениеигровогополяибуквукомпьютера,определяетдопустимыйходивозвращаетего.
+     #Учитывая заполнение игрового поля и букву компьютера, определяет допустимый ход и возвращает его.
     if computerLetter == 'Х':
         playerLetter = 'О'
     else:
